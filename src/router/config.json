@@ -1,0 +1,9 @@
+{
+    "api" : [
+      {
+        "path" : "/users",
+        "target" : "/user"
+      }
+    ],
+    "apiSrcDir" : "../api"
+  }
