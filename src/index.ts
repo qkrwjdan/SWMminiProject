@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
-import connectDB from "./Loader/db";
+import connectDB from "./loader/db";
+import config from "./config";
 
 const app = express();
 connectDB();
@@ -9,9 +10,9 @@ app.use("/api", require("./router"));
 
 app.get("/", (req: Request, res: Response, next: NextFunction) => {
   res.send("Hello World!");
-}); 
+});
 
-const port: number = 8000;
+const port: number = config.port;
 
 app.listen(port, () => {
   console.log(`
