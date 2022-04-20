@@ -4,10 +4,7 @@ import User from "../models/user";
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(config.mongoURI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(config.mongoURI);
 
     console.log("Mongoose Connected ...");
 //     Dog.createCollection().then(function (collection) {
